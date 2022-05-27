@@ -1,0 +1,87 @@
+[
+    {
+        "id": "eb6539302d516693",
+        "type": "tab",
+        "label": "Internet monitor",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "794fa7774c9c5656",
+        "type": "is online",
+        "z": "eb6539302d516693",
+        "name": "",
+        "url": "www.google.com",
+        "action": "2",
+        "x": 240,
+        "y": 120,
+        "wires": [
+            [
+                "5f135985dcbddf73",
+                "1998c7c39a97666b"
+            ]
+        ]
+    },
+    {
+        "id": "be575145fb82eb43",
+        "type": "inject",
+        "z": "eb6539302d516693",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 120,
+        "wires": [
+            [
+                "794fa7774c9c5656"
+            ]
+        ]
+    },
+    {
+        "id": "1998c7c39a97666b",
+        "type": "exec",
+        "z": "eb6539302d516693",
+        "command": "reboot",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 390,
+        "y": 120,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "5f135985dcbddf73",
+        "type": "debug",
+        "z": "eb6539302d516693",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 180,
+        "wires": []
+    }
+]
